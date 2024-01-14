@@ -1,0 +1,119 @@
+:root {
+    --clr-primary-500-hsl: 185, 75%, 39%;
+    --clr-primary-800-hsl: 229, 23%, 23%;
+    --clr-primary-700-hsl: 227, 10%, 46%;
+    --clr-neutral-600-hsl: 0, 0%, 59%;
+
+    --clr-primary-500: hsl(var(--clr-primary-500-hsl));
+    --clr-primary-800: hsl(var(--clr-primary-800-hsl));
+    --clr-primary-700: hsl(var(--clr-primary-700-hsl));
+    --clr-neutral-600: hsl(var(--clr-neutral-600-hsl));
+
+    --ff-default: 'Kumbh Sans', sans-serif;
+    --fs-p: 18px;
+
+    --fw-regular: 400;
+    --fw-bold: 700;
+}
+
+* {
+    margin: 0;
+    font: inherit;
+}
+
+*,
+*::after,
+*::before {
+    box-sizing: border-box;
+}
+
+img,
+svg {
+    max-width: 100%;
+    display: block;
+}
+
+body {
+    display: grid;
+    place-content: center;
+    min-height: 100svh;
+    background-color: var(--clr-primary-500);
+    font-family: var(--ff-default);
+    background-image: url(images/bg-pattern-top.svg), url(images/bg-pattern-bottom.svg);
+    background-repeat: no-repeat, no-repeat;
+    background-position: right 48vw bottom 50vh, 
+    left 49vw top 50vh;
+}
+
+@media (max-width: 600px) {
+    body {
+        background-position: right 40vw bottom 45vh, 
+        left 40vw top 45vh;
+    }
+}
+
+.small {
+    font-size: calc(var(--fs-p) * 0.85);
+}
+
+.smallest {
+    font-size: calc(var(--fs-p) * 0.6);
+    letter-spacing: 1px;
+    margin-block: 0.25rem;
+}
+
+.card {
+    background-color: white;
+    border-radius: 1rem;
+    overflow: hidden;
+    color: var(--clr-neutral-600);
+    font-size: var(--fs-p);
+    box-shadow: 0px 5px 1rem hsl(var(--clr-primary-800-hsl), 0.2);
+}
+
+.bold {
+    font-weight: bold;
+    color: var(--clr-primary-800);
+}
+
+.content {
+    display: grid;
+    gap: 1.75rem;
+}
+
+.profile-details {
+    display: grid;
+    gap: 1.5rem;
+}
+
+.profile-pic {
+    margin-inline: auto;
+    border-radius: 50%;
+    border: 5px solid white;
+    position: relative;
+    top: -50%;
+}
+
+.profile-info {
+    margin-top: -3rem;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.profile-info .bold {
+    margin-inline-end: 0.3rem;
+}
+
+.stats {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+    border-block-start: 1px solid hsl(var(--clr-neutral-600-hsl), 0.2);
+    padding: 1.5rem 2.5rem;
+}
+
+.stat {
+    text-align: center;
+}
