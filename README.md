@@ -42,7 +42,7 @@ This is a solution to the [Profile card component challenge on Frontend Mentor](
 ### Continued development
 
 I've got to get more comfortable with positioning (absolute and relative), and negative margins. I also have to get more comfortable with using images as objects, svgs, and background images. I struggled with envisioning how to get things in the places they needed to go because I've avoided having to deal with this kind of issue in the past.
-
+ 
 ## Author
 
 - Frontend Mentor - [@nicholasboyce](https://www.frontendmentor.io/profile/nicholasboyce)
